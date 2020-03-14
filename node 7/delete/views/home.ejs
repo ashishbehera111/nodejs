@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ('partials/nav') %>
+    <div  class="one">
+    <h2 >welcome to node js</h2>
+<form id="myForm">
+    <input type="text" name="item">
+        
+    <button type="submit" class="waves-effect waves-light btn">add</button>
+</form>
+
+    <ul>
+     <% wish.forEach(item=>{ %>
+          <li onclick="deleteme(this)"><%= item%></li>
+     <% }) %>
+    
+    </ul>
+    
+    
+    </div>
+   <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
